@@ -57,5 +57,9 @@ namespace xNetStandart
             sb.Remove(sb.Length - 1, 1);
             return sb.ToString();
         }
-    }
+		public override string ToString()
+		{
+			return this.ParamsToString();
+		}
+	}
 }
