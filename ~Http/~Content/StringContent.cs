@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет тело запроса в виде строки.

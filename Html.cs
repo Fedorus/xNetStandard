@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет статический класс, предназначенный для помощи в работе с HTML и с другими текстовыми данными.

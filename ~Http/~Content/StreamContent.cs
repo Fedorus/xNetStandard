@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет тело запроса в виде потока.

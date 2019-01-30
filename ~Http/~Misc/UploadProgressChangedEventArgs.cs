@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет данные для события, сообщающим о прогрессе выгрузки данных.

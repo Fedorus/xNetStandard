@@ -13,7 +13,7 @@ using System.Threading;
 using System.Resources;
 using System.Diagnostics;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет класс, предназначеннный для отправки запросов HTTP-серверу.
@@ -636,7 +636,7 @@ namespace xNetStandart
         /// Возвращает или задает куки, связанные с запросом.
         /// </summary>
         /// <value>Значение по умолчанию — <see langword="null"/>.</value>
-        /// <remarks>Куки могут изменяться ответом от HTTP-сервера. Чтобы не допустить этого, нужно установить свойство <see cref="xNetStandart.Net.CookieDictionary.IsLocked"/> равным <see langword="true"/>.</remarks>
+        /// <remarks>Куки могут изменяться ответом от HTTP-сервера. Чтобы не допустить этого, нужно установить свойство <see cref="xNetStandard.Net.CookieDictionary.IsLocked"/> равным <see langword="true"/>.</remarks>
         public CookieDictionary Cookies { get; set; }
 
         #endregion
@@ -921,7 +921,7 @@ namespace xNetStandart
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="address"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Get(string address, RequestParams urlParams = null)
         {
             if (urlParams != null)
@@ -939,7 +939,7 @@ namespace xNetStandart
         /// <param name="urlParams">Параметры URL-адреса, или значение <see langword="null"/>.</param>
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Get(Uri address, RequestParams urlParams = null)
         {
             if (urlParams != null)
@@ -961,7 +961,7 @@ namespace xNetStandart
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="address"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address)
         {
             return Raw(HttpMethod.POST, address);
@@ -973,7 +973,7 @@ namespace xNetStandart
         /// <param name="address">Адрес интернет-ресурса.</param>
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address)
         {
             return Raw(HttpMethod.POST, address);
@@ -992,7 +992,7 @@ namespace xNetStandart
         /// Значение параметра <paramref name="reqParams"/> равно <see langword="null"/>.
         /// </exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="address"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, RequestParams reqParams, bool dontEscape = false)
         {
             #region Проверка параметров
@@ -1019,7 +1019,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="reqParams"/> равно <see langword="null"/>.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, RequestParams reqParams, bool dontEscape = false)
         {
             #region Проверка параметров
@@ -1055,7 +1055,7 @@ namespace xNetStandart
         /// -или
         /// Значение параметра <paramref name="contentType"/> является пустой строкой.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, string str, string contentType)
         {
             #region Проверка параметров
@@ -1109,7 +1109,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="contentType"/> является пустой строкой.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, string str, string contentType)
         {
             #region Проверка параметров
@@ -1163,7 +1163,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="contentType"/> является пустой строкой.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, byte[] bytes, string contentType = "application/octet-stream")
         {
             #region Проверка параметров
@@ -1208,7 +1208,7 @@ namespace xNetStandart
         /// Значение параметра <paramref name="contentType"/> равно <see langword="null"/>.
         /// </exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="contentType"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, byte[] bytes, string contentType = "application/octet-stream")
         {
             #region Проверка параметров
@@ -1257,7 +1257,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="contentType"/> является пустой строкой.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, Stream stream, string contentType = "application/octet-stream")
         {
             #region Проверка параметров
@@ -1302,7 +1302,7 @@ namespace xNetStandart
         /// Значение параметра <paramref name="contentType"/> равно <see langword="null"/>.
         /// </exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="contentType"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, Stream stream, string contentType = "application/octet-stream")
         {
             #region Проверка параметров
@@ -1348,7 +1348,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="path"/> является пустой строкой.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, string path)
         {
             #region Проверка параметров
@@ -1380,7 +1380,7 @@ namespace xNetStandart
         /// Значение параметра <paramref name="path"/> равно <see langword="null"/>.
         /// </exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="path"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, string path)
         {
             #region Проверка параметров
@@ -1412,7 +1412,7 @@ namespace xNetStandart
         /// Значение параметра <paramref name="content"/> равно <see langword="null"/>.
         /// </exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="address"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(string address, HttpContent content)
         {
             #region Проверка параметров
@@ -1438,7 +1438,7 @@ namespace xNetStandart
         /// -или-
         /// Значение параметра <paramref name="content"/> равно <see langword="null"/>.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Post(Uri address, HttpContent content)
         {
             #region Проверка параметров
@@ -1466,7 +1466,7 @@ namespace xNetStandart
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
         /// <exception cref="System.ArgumentException">Значение параметра <paramref name="address"/> является пустой строкой.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Raw(HttpMethod method, string address, HttpContent content = null)
         {
             #region Проверка параметров
@@ -1495,7 +1495,7 @@ namespace xNetStandart
         /// <param name="content">Контент, отправляемый HTTP-серверу, или значение <see langword="null"/>.</param>
         /// <returns>Объект, предназначенный для загрузки ответа от HTTP-сервера.</returns>
         /// <exception cref="System.ArgumentNullException">Значение параметра <paramref name="address"/> равно <see langword="null"/>.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public HttpResponse Raw(HttpMethod method, Uri address, HttpContent content = null)
         {
             #region Проверка параметров
@@ -2733,9 +2733,9 @@ namespace xNetStandart
             #region Content
 
             if (EnableEncodingContent)
-                //headers["Accept-Encoding"] = "gzip,deflate";
-                //TODO fix gzip
-                headers["Accept-Encoding"] = "deflate";
+                headers["Accept-Encoding"] = "gzip,deflate";
+                //TODO looks like fixed but in case of error with GZipStream use deflate encoding
+                //headers["Accept-Encoding"] = "deflate";
 
             if (Culture != null)
                 headers["Accept-Language"] = GetLanguageHeader();

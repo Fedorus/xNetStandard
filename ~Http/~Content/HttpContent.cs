@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет тело запроса. Освбождается сразу после отправки.

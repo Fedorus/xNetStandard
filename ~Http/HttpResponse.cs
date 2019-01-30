@@ -5,9 +5,9 @@ using System.IO.Compression;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using xNetStandart;
+using xNetStandard;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет класс, предназначеннный для загрузки ответа от HTTP-сервера.
@@ -425,7 +425,7 @@ namespace xNetStandart
         /// <summary>
         /// Возвращает кодировку тела сообщения.
         /// </summary>
-        /// <value>Кодировка тела сообщения, если соответствующий заголок задан, иначе значение заданное в <see cref="xNetStandart.Net.HttpRequest"/>. Если и оно не задано, то значение <see cref="System.Text.Encoding.Default"/>.</value>
+        /// <value>Кодировка тела сообщения, если соответствующий заголок задан, иначе значение заданное в <see cref="xNetStandard.Net.HttpRequest"/>. Если и оно не задано, то значение <see cref="System.Text.Encoding.Default"/>.</value>
         public Encoding CharacterSet { get; private set; }
 
         /// <summary>
@@ -453,9 +453,9 @@ namespace xNetStandart
         }
 
         /// <summary>
-        /// Возвращает куки, образовавшиеся в результате запроса, или установленные в <see cref="xNetStandart.Net.HttpRequest"/>.
+        /// Возвращает куки, образовавшиеся в результате запроса, или установленные в <see cref="xNetStandard.Net.HttpRequest"/>.
         /// </summary>
-        /// <remarks>Если куки были установлены в <see cref="xNetStandart.Net.HttpRequest"/> и значение свойства <see cref="xNetStandart.Net.CookieDictionary.IsLocked"/> равно <see langword="true"/>, то будут созданы новые куки.</remarks>
+        /// <remarks>Если куки были установлены в <see cref="xNetStandard.Net.HttpRequest"/> и значение свойства <see cref="xNetStandard.Net.CookieDictionary.IsLocked"/> равно <see langword="true"/>, то будут созданы новые куки.</remarks>
         public CookieDictionary Cookies { get; private set; }
 
         /// <summary>
@@ -545,7 +545,7 @@ namespace xNetStandart
         /// </summary>
         /// <returns>Если тело сообщения отсутствует, или оно уже было загружено, то будет возвращён пустой массив байтов.</returns>
         /// <exception cref="System.InvalidOperationException">Вызов метода из ошибочного ответа.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public byte[] ToBytes()
         {
             #region Проверка состояния
@@ -602,7 +602,7 @@ namespace xNetStandart
         /// </summary>
         /// <returns>Если тело сообщения отсутствует, или оно уже было загружено, то будет возвращена пустая строка.</returns>
         /// <exception cref="System.InvalidOperationException">Вызов метода из ошибочного ответа.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         override public string ToString()
         {
             #region Проверка состояния
@@ -676,7 +676,7 @@ namespace xNetStandart
         /// -или-
         /// Вызывающий оператор не имеет необходимого разрешения.
         /// </exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public void ToFile(string path)
         {
             #region Проверка состояния
@@ -752,7 +752,7 @@ namespace xNetStandart
         /// </summary>
         /// <returns>Если тело сообщения отсутствует, или оно уже было загружено, то будет возвращено значение <see langword="null"/>.</returns>
         /// <exception cref="System.InvalidOperationException">Вызов метода из ошибочного ответа.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public MemoryStream ToMemoryStream()
         {
             #region Проверка состояния
@@ -808,7 +808,7 @@ namespace xNetStandart
         /// Пропускает тело сообщения. Данный метод следует вызвать, если не требуется тело сообщения.
         /// </summary>
         /// <exception cref="System.InvalidOperationException">Вызов метода из ошибочного ответа.</exception>
-        /// <exception cref="xNetStandart.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
+        /// <exception cref="xNetStandard.Net.HttpException">Ошибка при работе с HTTP-протоколом.</exception>
         public void None()
         {
             #region Проверка состояния

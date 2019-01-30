@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     internal static class ExceptionHelper
     {

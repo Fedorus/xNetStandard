@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Представляет коллекцию строк, представляющих параметры запроса.

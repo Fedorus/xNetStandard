@@ -1,5 +1,5 @@
 ﻿
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// HTTP-заголовки.

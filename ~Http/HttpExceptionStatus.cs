@@ -1,5 +1,5 @@
 ﻿
-namespace xNetStandart
+namespace xNetStandard
 {
     /// <summary>
     /// Определяет состояния для класса <see cref="HttpException"/>.

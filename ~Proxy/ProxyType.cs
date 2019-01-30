@@ -1,4 +1,4 @@
-﻿namespace xNetStandart
+﻿namespace xNetStandard
 {
     /// <summary>
     /// Тип прокси-сервера.
