@@ -51,7 +51,9 @@ namespace xNetStandard
         UnsupportedMediaType = 415,
         RequestedRangeNotSatisfiable = 416,
         ExpectationFailed = 417,
-        InstagramTryLaterError = 429,
+        UpgradeRequired = 426,
+        PreconditionRequired = 428,
+        TooManyRequests  = 429,
 
         InternalServerError = 500,
         NotImplemented = 501,
@@ -59,5 +61,6 @@ namespace xNetStandard
         ServiceUnavailable = 503,
         GatewayTimeout = 504,
         HttpVersionNotSupported = 505,
+        NetworkAuthenticationRequired = 511
     }
 }
