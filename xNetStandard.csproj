@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>xNetStandart</RootNamespace>
+    <Authors>Alex Fedorus</Authors>
+    <Description>Alternative http client based on xNet library with .net Core support and fixed bugs</Description>
+    <PackageTags />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Fedorus/xNetStandard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Fedorus/xNetStandard</RepositoryUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

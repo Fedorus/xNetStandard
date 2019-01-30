@@ -1,5 +1,7 @@
 # xNetStandard
 
+[![NuGet version](https://badge.fury.io/nu/xNetStandard.svg)](https://badge.fury.io/nu/xNetStandard.svg)
+
 This is version of https://github.com/X-rus/xNet for .NET Standard 2.0. Unlike xNet it can be used in .net Core.
 
 There was some bugs with GZipStream before .net Core 2.1. 
