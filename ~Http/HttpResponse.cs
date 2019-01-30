@@ -8,7 +8,8 @@ using System.Threading;
 using xNetStandard;
 
 namespace xNetStandard
-{
+{ 
+    [System.Diagnostics.DebuggerDisplay("{" + nameof(ToDebuggerString) + "()}")]
     /// <summary>
     /// Представляет класс, предназначеннный для загрузки ответа от HTTP-сервера.
     /// </summary>
@@ -599,6 +600,7 @@ namespace xNetStandard
 
         /// <summary>
         /// Загружает тело сообщения и возвращает его в виде строки.
+        /// Downloads body and returns it as string. But only ONCE
         /// </summary>
         /// <returns>Если тело сообщения отсутствует, или оно уже было загружено, то будет возвращена пустая строка.</returns>
         /// <exception cref="System.InvalidOperationException">Вызов метода из ошибочного ответа.</exception>
@@ -1778,7 +1780,15 @@ namespace xNetStandard
             return new HttpException(string.Format(message, Address.Host),
                 HttpExceptionStatus.ReceiveFailure, HttpStatusCode.None, innerException);
         }
-
+        /// <summary>
+        /// Method used for debugger to display result. By default it uses ToString() which can be executed just once
+        /// </summary>
+        /// <returns></returns>
+        private string ToDebuggerString()
+        {
+            return
+                $"Status Code: {(int)StatusCode}; Reason Phrase: '{StatusCode.ToString()}'; Content Type: '{ContentType}'";
+        }
         #endregion
     }
 }
