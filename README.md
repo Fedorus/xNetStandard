@@ -1,6 +1,6 @@
 # xNetStandard
 
-[![NuGet version](https://badge.fury.io/nu/xNetStandard.svg)](https://www.nuget.org/packages/xNetStandard/1.0.0)
+[![NuGet version](https://badge.fury.io/nu/xNetStandard.svg)](https://badge.fury.io/nu/xNetStandard)
 
 This is version of https://github.com/X-rus/xNet for .NET Standard 2.0. Unlike xNet it can be used in .net Core.
 
